@@ -1,11 +1,11 @@
 # Let's Planting grass on Github
 
-[English](./README.md) [한국어](./doc/README_kr.md)
+### README -> [한국어](./doc/README_kr.md) | [How do I design(kr)](./doc/How_do_I_design.md)
 
 - 2020-12-29 ~ 2020-12-30
 
+![result](photo/result.png)
+
 ## Isn't green grass important on Github? `I can say 'No'`
 
-Update soon
-
-![design](photo/design_1.png)
+Why? The answer link -> [StackExchange](https://softwareengineering.stackexchange.com/questions/345679/is-daily-commit-and-push-necessary-for-managers-and-supervisors-to-check-my-prog#:~:text=It%20should%20not%20be%20necessary,not%20very%20good%20at%20management.)

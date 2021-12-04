@@ -1,6 +1,10 @@
 # Let's Planting grass on Github
 
-### README -> [한국어](./doc/README_kr.md) | [How do I design(kr)](./doc/How_do_I_design.md)
+1일 1커밋보다 원하는 기능을 마음껏 만들 수 있는 개발자가 꿈입니다.
+
+제 이름을 잔디로 심어봤습니다.
+
+## README -> [한국어](./doc/README_kr.md) | [How do I design(kr)](./doc/How_do_I_design.md)
 
 - 2020-12-29 ~ 2020-12-30
 

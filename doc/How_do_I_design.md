@@ -28,13 +28,13 @@ Search at Google, link -> [5x5 text font alphabet](https://www.google.com/search
 
 커밋의 갯수를 세서 for문이 몇 번 도는지 측정하고 설계에 쓸꺼 같아 계산했습니다.
 
-- 1st line(Sun): 53 * 1(lime colour) = 53
-- 2ed(Mon): 17 + 3(W)+4(A)+3(N)+1(S)+4(A)+3(N)+1(G) = 17 + 19 = 36 -> 36 * 3(Pear colour) = 108
-- 3th(Tue): 17 + 2(W)+3(A)+2(N)+4(S)+3(A)+2(N)+4(G) = 17 + 20 = 37 -> 37 * 5(Emerlad colour) = 185
-- 4th(Wed): 17 + 2(W)+3(A)+2(N)+0(S)+3(A)+2(N)+1(G) = 17 + 13 = 30 -> 30 * 7(Seaweed colour) = 210
-- 5th(Thr): 17 + 0(W)+0(A)+2(N)+4(S)+0(A)+2(N)+3(G) = 17 + 11 = 28 -> 28 * 5 = 140
-- 6th(Fri): 17 + 3(W)+3(A)+3(N)+1(S)+3(A)+3(N)+2(G) = 17 + 18 = 35 -> 35 * 3 = 105
-- 7th(Sat): 52 * 1 = 52
+- 1st line(Sun): 53 \* 1(lime colour) = 53
+- 2ed(Mon): 17 + 3(W)+4(A)+3(N)+1(S)+4(A)+3(N)+1(G) = 17 + 19 = 36 -> 36 \* 3(Pear colour) = 108
+- 3th(Tue): 17 + 2(W)+3(A)+2(N)+4(S)+3(A)+2(N)+4(G) = 17 + 20 = 37 -> 37 \* 5(Emerlad colour) = 185
+- 4th(Wed): 17 + 2(W)+3(A)+2(N)+0(S)+3(A)+2(N)+1(G) = 17 + 13 = 30 -> 30 \* 7(Seaweed colour) = 210
+- 5th(Thr): 17 + 0(W)+0(A)+2(N)+4(S)+0(A)+2(N)+3(G) = 17 + 11 = 28 -> 28 \* 5 = 140
+- 6th(Fri): 17 + 3(W)+3(A)+3(N)+1(S)+3(A)+3(N)+2(G) = 17 + 18 = 35 -> 35 \* 3 = 105
+- 7th(Sat): 52 \* 1 = 52
 
 **Total**: 853 Commits
 
@@ -72,6 +72,7 @@ sum(int(i) for i in range('1101110111101111011101111100001111011110111011100001'
 사실 깃배쉬에서 가능할 수도 있지만 쉘 스크립트를 지원이 원할하지 못할꺼 같아 편한 리눅스 환경에서 하려 합니다.
 
 ~~저의 OS는 Windows이기 때문에 Linux Bash Shell을 다운로드를 해야 합니다.~~
+
 - 리눅스 배쉬 쉘 윈도우에서 사용하는법 링크(한글) -> [https://harryp.tistory.com/730](https://harryp.tistory.com/730)
 - How to install Linux Bash Shell on Windows 10 Link(english) -> [https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/)
 
@@ -88,9 +89,9 @@ sum(int(i) for i in range('1101110111101111011101111100001111011110111011100001'
    ![test](../photo/test1.png)
 
    ```bash
-   $ git rebase -i <해당 커밋>
-   $ git commit --amend --no-edit --date "JAN 1 12:00 2017 +0900"
-   $ git rebase --continue
+   git rebase -i <해당 커밋>
+   git commit --amend --no-edit --date "JAN 1 12:00 2017 +0900"
+   git rebase --continue
    ```
 
 2. 반복문 안에 로직 만들기
@@ -105,6 +106,7 @@ sum(int(i) for i in range('1101110111101111011101111100001111011110111011100001'
    git commit -m "1"
    git commit --amend --no-edit --date "JAN 4 12:0:00 2017 +0000"  # 날짜 부분을 변수로 설정하여 넣기
    ```
+
    ~~[해결 링크](https://stackoverflow.com/questions/17637591/how-to-detect-when-user-press-esc-and-do-something-in-shell-script/17640588)~~
 
    (해결 링크대로 하지 않고 리다이렉션으로 빠르게 수정하는 방법을 선택했습니다.)
@@ -139,7 +141,6 @@ sum(int(i) for i in range('1101110111101111011101111100001111011110111011100001'
       # blueprint의 숫자를 보고 반복
       for j in range(int(i)):
          print(f'{Month_name[month]} {day}', end=' ')
-         # TODO: 파일 수정 코드 추가
          # 깃 업데이트
          #    git add .
          #    git commit -m "Plant grass +1"
@@ -154,7 +155,7 @@ sum(int(i) for i in range('1101110111101111011101111100001111011110111011100001'
    vi macro.sh
    ```
 
-   ```sh
+   ```bash
    # !/bin/bash
    git add .
    git commit -m "Farming Macro"
@@ -173,7 +174,7 @@ sum(int(i) for i in range('1101110111101111011101111100001111011110111011100001'
 
    - 초안
 
-   ```sh
+   ```bash
    # !/bin/bash
    test="1 2 3 4"
 
@@ -182,7 +183,7 @@ sum(int(i) for i in range('1101110111101111011101111100001111011110111011100001'
    month=0
    day=0
 
-   # you can test it by switching from blueprint to test 
+   # you can test it by switching from blueprint to test
    for num in $test
    do
    # Update Day
@@ -203,7 +204,7 @@ sum(int(i) for i in range('1101110111101111011101111100001111011110111011100001'
    done
    ```
 
-   - 파일 수정 매크로 
+   - 파일 수정 매크로
 
    ```sh
    # !/bin/bash
@@ -223,7 +224,7 @@ Month_count=('31' '28' '31' '30' '31' '30' '31' '31' '30' '31' '30' '31')
 month=10
 day=17
 
-# you can test it by switching from blueprint to test 
+# you can test it by switching from blueprint to test
 for num in $blueprint
 do
   # Update Day
@@ -252,6 +253,7 @@ done
 ## :five: 추가할 수 있는 사항
 
 수정하면 가능한 것들(Things that can be modified)
+
 - 원하는 알파벳 7글자와 스페이스 하나를 입력하면 설계도가 나옵니다.
 - 2017년 뿐만 아니라 다른 년도도 가능합니다.
 - 특정 날짜부터 설계도만큼 처리할 수 있습니다.
